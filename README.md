@@ -12,5 +12,7 @@ Download the application from
 https://github.com/PraveenKumarMekala/ConsumerCars.git
 
 Run mvn clean install
+
 Start MainApplication
+
 Open localhost:8080/swagger-ui.html
