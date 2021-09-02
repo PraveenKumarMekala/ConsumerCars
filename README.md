@@ -1,4 +1,4 @@
-# ConsumerCars
+# Consumer Application
 This service is responsible for capturing user actions
 - User can create new data
 - User can update existing data
