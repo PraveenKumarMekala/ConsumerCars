@@ -14,6 +14,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
+
 import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
 import static org.springframework.http.ResponseEntity.*;
 
@@ -33,7 +35,7 @@ public class ConsumerController {
     @PostMapping(consumes = {APPLICATION_JSON_VALUE}, produces = {APPLICATION_JSON_VALUE})
     @Operation(method = "POST", summary = "Stores the data",
     description = "API to consume user data and send to other service")
-    public ResponseEntity<Long> store(@RequestBody  Consumer consumer, @Parameter(
+    public ResponseEntity<Long> store(@Valid  @RequestBody Consumer consumer, @Parameter(
             description = "Name of file type",
             array = @ArraySchema(schema = @Schema(type = "string", allowableValues = {"CSV", "XML"}))
     ) @PathVariable("fileType") FileType fileType) {
