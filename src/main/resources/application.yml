@@ -1,20 +1,25 @@
-spring
-  application
+service:
+  port: 8080
+
+spring:
+  application:
     name: consumer-application
 
   jackson:
     deserialization:
       fail-on-unknown-properties: false
-    serialization:
-      write-date-as-timestamps: false
 
   swagger-ui3:
     enabled: true
+  cloud:
+    loadbalancer:
+      ribbon:
+        enable: false
 
 client-properties:
   client-id: 1234abcde56788
-    client-secret: 89898u345-ioo3457
+  client-secret: 89898u345-ioo3457
 
 save-consumer:
-    url: https://connected.cars-sit.com
-    scope: openid, profile
+    url:
+    scope:

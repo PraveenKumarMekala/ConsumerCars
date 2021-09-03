@@ -2,7 +2,6 @@ package com.connected.cars.domain;
 
 import lombok.*;
 
-import java.math.BigDecimal;
 import java.time.LocalDate;
 
 @Getter
