@@ -11,11 +11,11 @@ import org.springframework.web.bind.annotation.*;
 public interface BaseProvider {
 
     @PostMapping(value = "/api/v1/save-consumer")
-    Long saveConsumer(@RequestBody Consumer consumer, @PathVariable("fileType") FileType fileType);
+    Long saveConsumer(@RequestBody byte[] consumer, @PathVariable("fileType") FileType fileType);
 
     @GetMapping(value = "/api/v1/fetch-consumers")
-    ConsumerResponse getAllConsumers();
+    byte[] getAllConsumers();
 
     @PutMapping(value = "/api/v1/update-consumer")
-    Consumer updateConsumer(@PathVariable("id") Long id);
+    byte[] updateConsumer(@PathVariable("id") Long id);
 }
